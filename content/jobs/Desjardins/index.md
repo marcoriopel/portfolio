@@ -1,0 +1,14 @@
+---
+date: '2019-09-01'
+title: 'Programmer Analyst Intern'
+company: 'Desjardins Group'
+location: 'Montreal'
+range: 'May - August 2019'
+url: 'https://www.desjardins.com/'
+---
+
+-   Preparing part of the infrastructure to move to PaaS
+-   Testing with Cucumber for BDD of backend in Java
+-   Frontend: Html, CSS, JSP, Bootstrap
+-   Backend: Java - SpringMVC, REST Apis, PAAS with Pivotal Cloud Foundry, Cucumber for BDD
+-   Devops: Weblogic servers management, Concourse for CI
