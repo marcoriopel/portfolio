@@ -1,11 +1,12 @@
 import React from 'react';
+import { useState } from 'react';
 
 // Code inspired from https://reedbarger.com/how-to-create-a-usewindowsize-react-hook/
 export default function useWindowSize() {
-    const isSSR = typeof window !== 'undefined';
+    const [hasRan, setHasRan] = useState(false);
     const [windowSize, setWindowSize] = React.useState({
-        width: isSSR ? 1200 : window.innerWidth,
-        height: isSSR ? 800 : window.innerHeight,
+        height: 0,
+        width: 0,
     });
 
     function changeWindowSize() {
@@ -13,6 +14,11 @@ export default function useWindowSize() {
     }
 
     React.useEffect(() => {
+        if (!hasRan) {
+            setHasRan(true);
+            changeWindowSize();
+        }
+
         window.addEventListener('resize', changeWindowSize);
 
         return () => {
