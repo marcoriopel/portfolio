@@ -4,7 +4,7 @@ import Particles from 'react-particles-js';
 export default function ParticlesContainer() {
     return (
         <Particles
-            style={{ position: 'absolute' }}
+            style={{ position: 'absolute', zIndex: '0' }}
             params={{
                 particles: {
                     number: {
