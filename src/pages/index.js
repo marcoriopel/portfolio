@@ -7,6 +7,7 @@ import ParticlesContainer from '../components/particles';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax';
 import styled from 'styled-components';
+import Head from '../components/head';
 
 const StyledMainContainer = styled.main`
     min-height: 475vh;
@@ -16,6 +17,7 @@ const StyledMainContainer = styled.main`
 export default function Home() {
     return (
         <StyledMainContainer>
+            <Head />
             <ParallaxProvider>
                 <ParticlesContainer />
                 <Parallax y={[-10, 20]}>
