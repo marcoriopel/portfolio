@@ -4,17 +4,18 @@ import Particles from 'react-particles-js';
 export default function ParticlesContainer() {
     return (
         <Particles
-            style={{ position: 'absolute', zIndex: '0' }}
+            style={{ position: 'absolute' }}
             params={{
                 particles: {
                     number: {
-                        value: 75,
+                        value: 150,
                     },
                     size: {
                         value: 3,
                     },
                 },
                 interactivity: {
+                    detect_on: 'window',
                     events: {
                         onhover: {
                             enable: true,

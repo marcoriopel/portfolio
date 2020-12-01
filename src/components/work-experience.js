@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const CompanyName = styled.a`
     color: #4287f5;
-    zindex: 5;
+
     font-size: 25px;
     text-transform: uppercase;
     text-decoration: none;
@@ -17,7 +17,7 @@ const CompanyName = styled.a`
         display: block;
         height: 2px;
         left: 50%;
-        position: absolute;
+        position: relative;
         background: #4287f5;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
@@ -53,8 +53,16 @@ const WorkExperience = () => {
     const jobsData = data.jobs.edges;
 
     return (
-        <div style={{ color: `#a6a6a6`, paddingTop: '1000px' }}>
-            <div style={{ fontSize: `60px`, color: `white`, position: 'relative', zIndex: '5', paddingBottom: '30px' }}>
+        <div style={{ color: `#a6a6a6`, paddingTop: '100vh' }}>
+            <div
+                style={{
+                    fontSize: `60px`,
+                    color: `white`,
+                    position: 'relative',
+                    zIndex: '10 !important',
+                    paddingBottom: '30px',
+                }}
+            >
                 Work Experience
             </div>
             {jobsData &&
