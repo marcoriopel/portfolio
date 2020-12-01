@@ -2,6 +2,14 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
+const Experience = styled.div`
+    padding-left: 30px;
+    padding-bottom: 40px;
+    @media (max-width: 600px) {
+        width: 450px;
+    }
+`;
+
 const CompanyName = styled.a`
     color: #4287f5;
 
@@ -71,12 +79,14 @@ const WorkExperience = () => {
                     const { title, url, company, range } = frontmatter;
 
                     return (
-                        <div key={i} style={{ paddingLeft: '30px', paddingBottom: '40px' }}>
-                            <CompanyName href={url}>{company}</CompanyName>
-                            <span> - {title}</span>
-                            <h4 style={{ paddingLeft: '30px' }}>{range}</h4>
-                            <div style={{ paddingLeft: '30px' }} dangerouslySetInnerHTML={{ __html: html }} />
-                        </div>
+                        <li key={i}>
+                            <Experience>
+                                <CompanyName href={url}>{company}</CompanyName>
+                                <span> - {title}</span>
+                                <h4 style={{ paddingLeft: '30px' }}>{range}</h4>
+                                <div style={{ paddingLeft: '30px' }} dangerouslySetInnerHTML={{ __html: html }} />
+                            </Experience>
+                        </li>
                     );
                 })}
         </div>

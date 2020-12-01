@@ -8,6 +8,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax';
 import styled from 'styled-components';
 import Head from '../components/head';
+import useWindowSize from '../hooks/useWindowSize';
 
 const StyledMainContainer = styled.main`
     min-height: 475vh;
@@ -15,12 +16,15 @@ const StyledMainContainer = styled.main`
 `;
 
 export default function Home() {
+    const { width } = useWindowSize();
+    console.log(width);
+
     return (
         <StyledMainContainer>
             <Head />
             <ParallaxProvider>
-                <ParticlesContainer />
-                <Parallax y={[-10, 20]}>
+                <ParticlesContainer isEnabled={width > 600} />
+                <Parallax y={[-10, 20]} disabled={width <= 600}>
                     <Container>
                         <Header />
                         <AboutMe />
