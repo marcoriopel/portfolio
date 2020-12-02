@@ -1,10 +1,9 @@
-import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Code inspired from https://reedbarger.com/how-to-create-a-usewindowsize-react-hook/
 export default function useWindowSize() {
     const [hasRan, setHasRan] = useState(false);
-    const [windowSize, setWindowSize] = React.useState({
+    const [windowSize, setWindowSize] = useState({
         height: 0,
         width: 0,
     });
@@ -13,7 +12,7 @@ export default function useWindowSize() {
         setWindowSize({ width: window.innerWidth, height: window.innerHeight });
     }
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!hasRan) {
             setHasRan(true);
             changeWindowSize();

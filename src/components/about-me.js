@@ -4,13 +4,34 @@ import styled from 'styled-components';
 const Paragraph = styled.p`
     padding-left: 30px;
     color: #a6a6a6;
-    font-size: 27px;
-    padding-right: 300px;
+    font-size: clamp(20px, 4vw, 27px);
+    width: clamp(20px, 70vw, 1200px);
+
+    @media (max-width: 600px) {
+        width: 90%;
+        margin-block-end: 0px;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-right: 0px;
+        text-align: center;
+    }
+`;
+
+const AboutMeSection = styled.div`
+    color: white;
+    font-size: 30px;
+    @media (max-width: 600px) {
+        margin-block-end: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-right: 0px;
+        text-align: center;
+    }
 `;
 
 export default function AboutMe() {
     return (
-        <div style={{ color: `white`, fontSize: `30px` }}>
+        <AboutMeSection>
             <h2 style={{ color: `white`, fontSize: `60px`, paddingTop: '100vh' }}>About me</h2>
             <Paragraph>Hey! I'm Marco, a software engineering student at Polytechnique Montréal since 2018.</Paragraph>
             <Paragraph>
@@ -25,6 +46,6 @@ export default function AboutMe() {
                 In my free time I like to work on various personal projects that allow me to learn new technologies. I
                 also like to stay active by playing sports with friends, doing a cycling training or taking a run.
             </Paragraph>
-        </div>
+        </AboutMeSection>
     );
 }

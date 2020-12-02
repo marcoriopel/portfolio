@@ -7,6 +7,7 @@ const Experience = styled.div`
     padding-bottom: 40px;
     @media (max-width: 600px) {
         width: 450px;
+        text-align: left;
     }
 `;
 

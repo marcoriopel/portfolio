@@ -18,12 +18,20 @@ const WelcomeMessage = styled.span`
     padding-left: 30px;
     color: #a6a6a6;
     font: Inconsolata, monospace;
-    font-size: clamp(30px, 8vw, 35px);
+    font-size: clamp(25px, 6vw, 35px);
+
+    @media (max-width: 600px) {
+        padding-left: 0px;
+    }
 `;
 
 const Presentation = styled.h1`
     color: white;
     font-size: clamp(40px, 8vw, 100px);
+
+    @media (max-width: 600px) {
+        text-align: center;
+    }
 `;
 
 export default function Header() {
