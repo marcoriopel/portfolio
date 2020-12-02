@@ -12,9 +12,9 @@ const Experience = styled.div`
 `;
 
 const CompanyName = styled.a`
+    width: 500;
     color: #4287f5;
-
-    font-size: 25px;
+    font-size: clamp(20px, 4vw, 25px);
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -34,6 +34,19 @@ const CompanyName = styled.a`
     :hover:after {
         width: 100%;
         left: 0;
+    }
+`;
+
+const BigRole = styled.span`
+    @media (max-width: 750px) {
+        visibility: hidden;
+    }
+`;
+
+const SmallRole = styled.div`
+    padding-top: 5px;
+    @media (min-width: 751px) {
+        visibility: hidden;
     }
 `;
 const WorkExperience = () => {
@@ -62,28 +75,19 @@ const WorkExperience = () => {
     const jobsData = data.jobs.edges;
 
     return (
-        <div style={{ color: `#a6a6a6`, paddingTop: '100vh' }}>
-            <div
-                style={{
-                    fontSize: `60px`,
-                    color: `white`,
-                    position: 'relative',
-                    zIndex: '10 !important',
-                    paddingBottom: '30px',
-                }}
-            >
-                Work Experience
-            </div>
+        <div>
+            <h2 className="section-heading">Work Experience</h2>
             {jobsData &&
                 jobsData.map(({ node }, i) => {
                     const { frontmatter, html } = node;
                     const { title, url, company, range } = frontmatter;
 
                     return (
-                        <li key={i}>
+                        <li key={i} style={{ color: `#a6a6a6` }}>
                             <Experience>
                                 <CompanyName href={url}>{company}</CompanyName>
-                                <span> - {title}</span>
+                                <BigRole> - {title} </BigRole>
+                                <SmallRole> - {title} - </SmallRole>
                                 <h4 style={{ paddingLeft: '30px' }}>{range}</h4>
                                 <div style={{ paddingLeft: '30px' }} dangerouslySetInnerHTML={{ __html: html }} />
                             </Experience>

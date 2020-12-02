@@ -32,7 +32,7 @@ const AboutMeSection = styled.div`
 export default function AboutMe() {
     return (
         <AboutMeSection>
-            <h2 style={{ color: `white`, fontSize: `60px`, paddingTop: '100vh' }}>About me</h2>
+            <h2 className="section-heading">About me</h2>
             <Paragraph>Hey! I'm Marco, a software engineering student at Polytechnique Montréal since 2018.</Paragraph>
             <Paragraph>
                 I love the industry in which I'm working and studying everyday because the innovation possibilities are
@@ -44,7 +44,7 @@ export default function AboutMe() {
             </Paragraph>
             <Paragraph>
                 In my free time I like to work on various personal projects that allow me to learn new technologies. I
-                also like to stay active by playing sports with friends, doing a cycling training or taking a run.
+                also like to stay active by playing sports with friends, cycling or running.
             </Paragraph>
         </AboutMeSection>
     );

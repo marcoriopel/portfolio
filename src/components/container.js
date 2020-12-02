@@ -8,11 +8,9 @@ const ContainerStyle = styled.div`
     padding-left: clamp(30px, 10vw, 300px);
     position: relative;
     padding-top: 200px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-family: 'Montserrat', sans-serif;
 
     @media (max-width: 600px) {
-        text-align: center;
         padding-left: 0px;
         padding-right: 0px;
         margin: 0;
