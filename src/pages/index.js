@@ -12,7 +12,7 @@ import useWindowSize from '../hooks/useWindowSize';
 
 const StyledMainContainer = styled.main`
     min-height: 475vh;
-    position: relative;
+    position: absolute;
 `;
 
 export default function Home() {
