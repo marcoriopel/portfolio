@@ -12,7 +12,7 @@ const Experience = styled.div`
 `;
 
 const CompanyName = styled.a`
-    width: 500;
+    width: auto;
     color: #4287f5;
     font-size: clamp(20px, 4vw, 25px);
     text-transform: uppercase;
@@ -38,17 +38,36 @@ const CompanyName = styled.a`
 `;
 
 const BigRole = styled.span`
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     @media (max-width: 750px) {
-        visibility: hidden;
+        display: none;
     }
 `;
 
 const SmallRole = styled.div`
-    padding-top: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     @media (min-width: 751px) {
-        visibility: hidden;
+        display: none;
     }
 `;
+
+const WorkDates = styled.h4`
+    padding-left: clamp(15px, 4vw, 30px);
+    margin-block-start: clamp(0.1em, 1vh, 1.33em);
+    margin-block-end: clamp(0.1em, 1vh, 1.33em);
+`;
+
+const WorkDesc = styled.div`
+    padding-left: clamp(10px, 2vw, 30px);
+    line-height: 1.33em;
+`;
+
 const WorkExperience = () => {
     const data = useStaticQuery(graphql`
         query {
@@ -83,15 +102,15 @@ const WorkExperience = () => {
                     const { title, url, company, range } = frontmatter;
 
                     return (
-                        <li key={i} style={{ color: `#a6a6a6` }}>
+                        <div key={i} style={{ color: `#a6a6a6` }}>
                             <Experience>
                                 <CompanyName href={url}>{company}</CompanyName>
                                 <BigRole> - {title} </BigRole>
                                 <SmallRole> - {title} - </SmallRole>
-                                <h4 style={{ paddingLeft: '30px' }}>{range}</h4>
-                                <div style={{ paddingLeft: '30px' }} dangerouslySetInnerHTML={{ __html: html }} />
+                                <WorkDates>{range}</WorkDates>
+                                <WorkDesc dangerouslySetInnerHTML={{ __html: html }} />
                             </Experience>
-                        </li>
+                        </div>
                     );
                 })}
         </div>

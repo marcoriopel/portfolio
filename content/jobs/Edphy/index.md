@@ -1,7 +1,7 @@
 ---
 date: '2018-09-01'
 title: 'Head Camp Counselor, Counselor'
-company: 'Edphy International Camp'
+company: 'Edphy Int. Camp'
 location: 'Montreal'
 range: 'May 2017 - August 2018'
 url: 'https://edphy.com'

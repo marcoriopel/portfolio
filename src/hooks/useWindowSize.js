@@ -23,7 +23,7 @@ export default function useWindowSize() {
         return () => {
             window.removeEventListener('resize', changeWindowSize);
         };
-    }, []);
+    }, [hasRan]);
 
     return windowSize;
 }
