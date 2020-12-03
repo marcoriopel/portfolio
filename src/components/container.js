@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const ContainerStyle = styled.div`
     margin: 3rem auto;
     color: white;
+    top: 0;
     padding-left: clamp(30px, 10vw, 300px);
     position: relative;
     padding-top: 200px;

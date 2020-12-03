@@ -9,6 +9,7 @@ import { Parallax } from 'react-scroll-parallax';
 import styled from 'styled-components';
 import Head from '../components/head';
 import useWindowSize from '../hooks/useWindowSize';
+import useReloadWindow from '../hooks/useReloadWindow';
 import GlobalStyles from '../components/styles/GlobalStyles';
 
 const StyledMainContainer = styled.main`
@@ -19,12 +20,12 @@ const StyledMainContainer = styled.main`
 
 export default function Home() {
     const { width } = useWindowSize();
-
+    useReloadWindow();
     return (
-        <StyledMainContainer>
-            <GlobalStyles />
-            <Head />
-            <ParallaxProvider>
+        <ParallaxProvider>
+            <StyledMainContainer>
+                <GlobalStyles />
+                <Head />
                 <ParticlesContainer isEnabled={width > 600} />
                 <Parallax y={[-10, 20]} disabled={width <= 600}>
                     <Container>
@@ -33,7 +34,7 @@ export default function Home() {
                         <WorkExperience />
                     </Container>
                 </Parallax>
-            </ParallaxProvider>
-        </StyledMainContainer>
+            </StyledMainContainer>
+        </ParallaxProvider>
     );
 }

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledParticlesContainer = styled.div`
     top: 0 !important;
-    position: 'absolute';
+    position: absolute;
     height: 100% !important;
     width: 100% !important;
 `;
@@ -31,7 +31,6 @@ export default function ParticlesContainer({ isEnabled }) {
                             anim: {
                                 enable: isEnabled,
                                 speed: 0.5,
-                                // opacity_min: 0.4,
                                 sync: true,
                             },
                         },
@@ -40,7 +39,6 @@ export default function ParticlesContainer({ isEnabled }) {
                             distance: 150,
                             color: '#fff',
                             opacity: isEnabled ? 0.6 : 0.2,
-                            // width: 4
                         },
                     },
 
@@ -52,6 +50,11 @@ export default function ParticlesContainer({ isEnabled }) {
                                 mode: 'repulse',
                             },
                         },
+                    },
+                    background: {
+                        image: '',
+                        repeat: 'no-repeat',
+                        size: 'cover',
                     },
                 }}
             />
