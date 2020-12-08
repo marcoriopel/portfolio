@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 const Experience = styled.div`
     padding-left: 30px;
+    width: 80%;
     padding-bottom: 40px;
     @media (max-width: 600px) {
-        width: 450px;
         text-align: left;
     }
 `;
@@ -65,6 +65,7 @@ const WorkDates = styled.h4`
 
 const WorkDesc = styled.div`
     padding-left: clamp(10px, 2vw, 30px);
+    width: 80%;
     line-height: 1.33em;
 `;
 
