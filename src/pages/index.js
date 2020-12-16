@@ -21,6 +21,7 @@ const StyledMainContainer = styled.main`
 export default function Home() {
     const { width } = useWindowSize();
     useReloadWindow();
+    console.log(width);
     return (
         <ParallaxProvider>
             <StyledMainContainer>
