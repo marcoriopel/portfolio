@@ -3,10 +3,11 @@ date: '2020-11-01'
 title: 'Developer'
 company: 'XYJ International'
 location: 'Montreal'
-range: 'December 2019 - Present'
+range: 'November 2019 - Present'
 url: ''
 ---
 
--   Managing a cloud server
--   Web scraping software development with Python and SQL Server Express
--   Use of Beautiful Soup Python package and Selenium framework
+-   Developing scraping scripts using Python and SQL
+-   Setting up and managing cloud servers on Vultr
+-   Communicating with clients to develop customized products
+-   Increased performance by 2x by optimizing existing scripts
