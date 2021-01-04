@@ -7,7 +7,7 @@ range: 'May 2017 - August 2018'
 url: 'https://edphy.com'
 ---
 
--   Creation of a theme and its integration for the whole summer
--   Supervision and evaluation of the counselors
--   Interventions with troublemaking kids in their groups
--   Taking charge of groups of children
+-   Created and integrated a theme for the whole summer
+-   Supervised and evaluated the counselors
+-   Lead interventions with troublemaking kids in their groups
+-   Took charge of groups of children

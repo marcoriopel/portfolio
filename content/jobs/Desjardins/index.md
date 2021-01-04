@@ -7,8 +7,8 @@ range: 'May - August 2019'
 url: 'https://www.desjardins.com/'
 ---
 
--   Preparing part of the infrastructure to move to PaaS
--   Testing with Cucumber for BDD of backend in Java
+-   Prepared part of the infrastructure to move to PaaS
+-   Tested with Cucumber for BDD of backend in Java
 -   Frontend: Html, CSS, JSP, Bootstrap
 -   Backend: Java - SpringMVC, REST Apis, PAAS with Pivotal Cloud Foundry, Cucumber for BDD
--   Devops: Weblogic servers management, Concourse for CI
+-   Devops: Weblogic servers management, Concourse for CI, Bitbucket

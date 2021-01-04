@@ -28,7 +28,7 @@ const WelcomeMessage = styled.span`
 `;
 
 const Presentation = styled.h1`
-    color: white;
+    color: #b1d4e0;
     font-size: clamp(35px, 8vw, 100px);
 
     @media (max-width: 600px) {

@@ -13,7 +13,7 @@ const Experience = styled.div`
 
 const CompanyName = styled.a`
     width: auto;
-    color: #4287f5;
+    color: #2e8bc0;
     font-size: clamp(20px, 4vw, 25px);
     text-transform: uppercase;
     text-decoration: none;
@@ -27,7 +27,7 @@ const CompanyName = styled.a`
         height: 2px;
         left: 50%;
         position: relative;
-        background: #4287f5;
+        background: #2e8bc0;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
     }

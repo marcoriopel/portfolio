@@ -13,7 +13,7 @@ import useReloadWindow from '../hooks/useReloadWindow';
 import GlobalStyles from '../components/styles/GlobalStyles';
 
 const StyledMainContainer = styled.main`
-    min-height: 475vh;
+    min-height: 490vh;
     position: absolute;
     min-width: 98vw;
 `;
@@ -21,7 +21,6 @@ const StyledMainContainer = styled.main`
 export default function Home() {
     const { width } = useWindowSize();
     useReloadWindow();
-    console.log(width);
     return (
         <ParallaxProvider>
             <StyledMainContainer>
