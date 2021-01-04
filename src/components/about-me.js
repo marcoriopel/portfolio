@@ -18,7 +18,6 @@ const Paragraph = styled.p`
 `;
 
 const AboutMeSection = styled.div`
-    color: white;
     font-size: 30px;
     @media (max-width: 600px) {
         margin-block-end: 0px;

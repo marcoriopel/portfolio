@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 .section-heading {
-    color: white; 
+    color: #B1D4E0; 
     font-size: clamp(50px, 8vw, 60px); 
     clamp(25px, 6vw, 35px);
     padding-top: 100vh;
