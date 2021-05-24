@@ -13,7 +13,7 @@ import useReloadWindow from '../hooks/useReloadWindow';
 import GlobalStyles from '../components/styles/GlobalStyles';
 
 const StyledMainContainer = styled.main`
-    min-height: 490vh;
+    min-height: 560vh;
     position: absolute;
     min-width: 98vw;
 `;

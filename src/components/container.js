@@ -19,5 +19,5 @@ const ContainerStyle = styled.div`
 `;
 
 export default function Container({ children }) {
-    return <ContainerStyle className={containerStyles.container}>{children}</ContainerStyle>;
+    return <ContainerStyle>{children}</ContainerStyle>;
 }
